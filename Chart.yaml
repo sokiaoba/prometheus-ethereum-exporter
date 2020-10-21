@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "v1.1.0"
 description: A Helm chart for Prometheus Exporter for Ethereum
 name: prometheus-ethereum-exporter
-version: 0.2.1
+version: 0.2.2

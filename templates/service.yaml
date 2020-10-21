@@ -12,6 +12,5 @@ spec:
       targetPort: 9368
       protocol: TCP
   selector:
-    matchLabels:
-      app.kubernetes.io/name: {{ include "prometheus-ethereum-exporter.name" . }}
-      app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/name: {{ include "prometheus-ethereum-exporter.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
