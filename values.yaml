@@ -14,3 +14,7 @@ service:
   port: 9368
 
 targetUrl: http://ethereum:8545
+
+serviceMonitor:
+  interval: 15s
+  scrapeTimeout: 10s
