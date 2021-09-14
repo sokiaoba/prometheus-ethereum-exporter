@@ -7,8 +7,9 @@ metadata:
 spec:
   jobLabel: {{ .Chart.Name }}
   selector:
-    app.kubernetes.io/name: {{ include "prometheus-ethereum-exporter.name" . }}
-    app.kubernetes.io/instance: {{ .Release.Name }}
+    matchLabels:
+      app.kubernetes.io/name: {{ include "prometheus-ethereum-exporter.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
   endpoints:
   - port: exporter
     {{- if .Values.serviceMonitor.interval }}
